@@ -1,0 +1,151 @@
+-- -----------------------------------------------------
+-- Data for table `IFP_SHOP`.`DESCUENTOS'
+-- -----------------------------------------------------
+START TRANSACTION;
+USE `IFP_SHOP`;
+INSERT INTO `IFP_SHOP`.`DESCUENTOS` (`ID_DESCUENTO`, `FRECUENCIA_COMPRA`, `DESCUENTO`) VALUES (1, 0, 0);
+INSERT INTO `IFP_SHOP`.`DESCUENTOS` (`ID_DESCUENTO`, `FRECUENCIA_COMPRA`, `DESCUENTO`) VALUES (2, 1, 5);
+INSERT INTO `IFP_SHOP`.`DESCUENTOS` (`ID_DESCUENTO`, `FRECUENCIA_COMPRA`, `DESCUENTO`) VALUES (3, 2, 10);
+INSERT INTO `IFP_SHOP`.`DESCUENTOS` (`ID_DESCUENTO`, `FRECUENCIA_COMPRA`, `DESCUENTO`) VALUES (4, 3, 15);
+INSERT INTO `IFP_SHOP`.`DESCUENTOS` (`ID_DESCUENTO`, `FRECUENCIA_COMPRA`, `DESCUENTO`) VALUES (5, 4, 20);
+INSERT INTO `IFP_SHOP`.`DESCUENTOS` (`ID_DESCUENTO`, `FRECUENCIA_COMPRA`, `DESCUENTO`) VALUES (6, 5, 25);
+
+COMMIT;
+
+
+
+-- -----------------------------------------------------
+-- Data for table `IFP_SHOP`.`TIPOS_PRODUCTOS`
+-- -----------------------------------------------------
+START TRANSACTION;
+USE `IFP_SHOP`;
+INSERT INTO `IFP_SHOP`.`TIPOS_PRODUCTOS` (`ID_TIPO_PRODUCTO`, `NOM_TIPO_PRODUCTO`, `DESC_TIPO_PRODUCTO`, `ACTIVO`) VALUES (1, 'Alimentacion', 'Tipo genérico para productos de alimentación', 'N');
+INSERT INTO `IFP_SHOP`.`TIPOS_PRODUCTOS` (`ID_TIPO_PRODUCTO`, `NOM_TIPO_PRODUCTO`, `DESC_TIPO_PRODUCTO`, `ACTIVO`) VALUES (2, 'Bricolaje', 'Tipo genérico para productos de bricolaje', 'S');
+INSERT INTO `IFP_SHOP`.`TIPOS_PRODUCTOS` (`ID_TIPO_PRODUCTO`, `NOM_TIPO_PRODUCTO`, `DESC_TIPO_PRODUCTO`, `ACTIVO`) VALUES (3, 'Librería y Papelería', 'Tipo genérico para productos de librería y papelería', 'S');
+INSERT INTO `IFP_SHOP`.`TIPOS_PRODUCTOS` (`ID_TIPO_PRODUCTO`, `NOM_TIPO_PRODUCTO`, `DESC_TIPO_PRODUCTO`, `ACTIVO`) VALUES (4, 'Decoración', 'Tipo genérico par productos de decoración', 'S');
+INSERT INTO `IFP_SHOP`.`TIPOS_PRODUCTOS` (`ID_TIPO_PRODUCTO`, `NOM_TIPO_PRODUCTO`, `DESC_TIPO_PRODUCTO`, `ACTIVO`) VALUES (5, 'Jardinería', 'Tipo genérico par productos de jardinería', 'S');
+
+COMMIT;
+
+
+-- -----------------------------------------------------
+-- Data for table `IFP_SHOP`.`PRODUCTOS`
+-- -----------------------------------------------------
+
+START TRANSACTION;
+/*
+USE `IFP_SHOP`;
+INSERT INTO `IFP_SHOP`.`PRODUCTOS` (`ID_PRODUCTO`, `NOM_PRODUCTO`, `DESC_PRODUCTO`, `PRECIO_UNITARIO`, `CANTIDAD_POR_UNIDAD`, `COLOR`, `MEDIDAS`, `ID_TIPO_PRODUCTO`) VALUES (1, 'Orquidea Azul', 'Maceta transparente con orquidea azul', 34.5, 1, 'Azul', '60x20 [cm]  altura x diametro', 5);
+INSERT INTO `IFP_SHOP`.`PRODUCTOS` (`ID_PRODUCTO`, `NOM_PRODUCTO`, `DESC_PRODUCTO`, `PRECIO_UNITARIO`, `CANTIDAD_POR_UNIDAD`, `COLOR`, `MEDIDAS`, `ID_TIPO_PRODUCTO`) VALUES (2, 'Tornillos de chapa', 'Tornillos de chapa de acero inoxidable con cabeza Torx M4x14mm', 5.78, 100, 'Plata', '10x5x2 [cm] largo x ancho x altura', 3);
+INSERT INTO `IFP_SHOP`.`PRODUCTOS` (`ID_PRODUCTO`, `NOM_PRODUCTO`, `DESC_PRODUCTO`, `PRECIO_UNITARIO`, `CANTIDAD_POR_UNIDAD`, `COLOR`, `MEDIDAS`, `ID_TIPO_PRODUCTO`) VALUES (3, 'Caja herramientas de mano', 'Caja de herramientas vacía de plastico', 23, 1, 'Negro y rojo', '35x20x18 [cm] largo x ancho x altura', 3);
+INSERT INTO `IFP_SHOP`.`PRODUCTOS` (`ID_PRODUCTO`, `NOM_PRODUCTO`, `DESC_PRODUCTO`, `PRECIO_UNITARIO`, `CANTIDAD_POR_UNIDAD`, `COLOR`, `MEDIDAS`, `ID_TIPO_PRODUCTO`) VALUES (4, 'Taladro percutor', 'Taladro percutor profesional', 134.8, 1, 'Rojo', '31x15x23 [cm] largo x ancho x altura', 3);
+INSERT INTO `IFP_SHOP`.`PRODUCTOS` (`ID_PRODUCTO`, `NOM_PRODUCTO`, `DESC_PRODUCTO`, `PRECIO_UNITARIO`, `CANTIDAD_POR_UNIDAD`, `COLOR`, `MEDIDAS`, `ID_TIPO_PRODUCTO`) VALUES (5, 'Hojas Din A4', 'Paquetes de 500 hojas Din A4 de 80gr/cm2', 4.95, 4, 'Blanco', '29,7x21,0 [cm] largo x ancho', 2);
+INSERT INTO `IFP_SHOP`.`PRODUCTOS` (`ID_PRODUCTO`, `NOM_PRODUCTO`, `DESC_PRODUCTO`, `PRECIO_UNITARIO`, `CANTIDAD_POR_UNIDAD`, `COLOR`, `MEDIDAS`, `ID_TIPO_PRODUCTO`) VALUES (6, 'Macetero madera', 'Macetero de mader para exteriores con autoriego', 72.5, 1, 'Caoba', '80x40x30 [cm] largo x ancho x altura', 5);
+INSERT INTO `IFP_SHOP`.`PRODUCTOS` (`ID_PRODUCTO`, `NOM_PRODUCTO`, `DESC_PRODUCTO`, `PRECIO_UNITARIO`, `CANTIDAD_POR_UNIDAD`, `COLOR`, `MEDIDAS`, `ID_TIPO_PRODUCTO`) VALUES (7, 'Borrador pizarra tiza', 'Set de borradores de pizarra de tiza', 5.34, 3, 'Gris', '15x10x5 [cm] largo x ancho x altura', 2);
+INSERT INTO `IFP_SHOP`.`PRODUCTOS` (`ID_PRODUCTO`, `NOM_PRODUCTO`, `DESC_PRODUCTO`, `PRECIO_UNITARIO`, `CANTIDAD_POR_UNIDAD`, `COLOR`, `MEDIDAS`, `ID_TIPO_PRODUCTO`) VALUES (8, 'Manguera', 'Manguera 30m', 28.90, 1, 'Amarillo', '30 [m] largo', 5);
+
+COMMIT;
+*/
+
+CALL PR_CARGA_PRODUCTOS(1000);
+
+
+-- -----------------------------------------------------
+-- Data for table `IFP_SHOP`.`CLIENTES`
+-- -----------------------------------------------------
+START TRANSACTION;
+USE `IFP_SHOP`;
+INSERT INTO `IFP_SHOP`.`CLIENTES` (`ID_CLIENTE`, `NOM_CLIENTE`, `APELLIDOS_CLIENTE`, `DIRECCION_CLIENTE`, `CODIGO_POSTAL`, `POBLACION`, `PROVINCIA`, `TELF_CLIENTE`, `EMAIL_CLIENTE`) VALUES (1, 'José Antonio', 'Zambrano Moreno', 'Calle Martín Cortes 25 1º', '50008', 'Zaragoza', 'Zaragoza', '600123123', 'zmoreno@cartoinsa.com');
+INSERT INTO `IFP_SHOP`.`CLIENTES` (`ID_CLIENTE`, `NOM_CLIENTE`, `APELLIDOS_CLIENTE`, `DIRECCION_CLIENTE`, `CODIGO_POSTAL`, `POBLACION`, `PROVINCIA`, `TELF_CLIENTE`, `EMAIL_CLIENTE`) VALUES (2, 'Berta', 'Palau Cubell', 'Carrer Sant Marçal 1', '17406', 'Viladrau', 'Girona', '610983059', 'bpalaucubell@artsgrafiquesvalles.com');
+INSERT INTO `IFP_SHOP`.`CLIENTES` (`ID_CLIENTE`, `NOM_CLIENTE`, `APELLIDOS_CLIENTE`, `DIRECCION_CLIENTE`, `CODIGO_POSTAL`, `POBLACION`, `PROVINCIA`, `TELF_CLIENTE`, `EMAIL_CLIENTE`) VALUES (3, 'Maria Dolores', 'De Pablo Anguita', 'Calle Benjamín Ortiz 54 3º 2ª', '33001', 'Oviedo', 'Oviedo', '628900872', 'mdoloresdepablo@bioconstruct.es');
+INSERT INTO `IFP_SHOP`.`CLIENTES` (`ID_CLIENTE`, `NOM_CLIENTE`, `APELLIDOS_CLIENTE`, `DIRECCION_CLIENTE`, `CODIGO_POSTAL`, `POBLACION`, `PROVINCIA`, `TELF_CLIENTE`, `EMAIL_CLIENTE`) VALUES (4, 'Anna', 'Ruiz Lorenzo', 'Carrer des Palau 2', '07760', 'Ciutadella', 'Illes Balears', '627865997', 'annaruizlorenzo@peixateriaruiz.es');
+INSERT INTO `IFP_SHOP`.`CLIENTES` (`ID_CLIENTE`, `NOM_CLIENTE`, `APELLIDOS_CLIENTE`, `DIRECCION_CLIENTE`, `CODIGO_POSTAL`, `POBLACION`, `PROVINCIA`, `TELF_CLIENTE`, `EMAIL_CLIENTE`) VALUES (5, 'Alberto', 'García Utiguregui', 'Herrerieta kalea 7', '20808', 'Getaria', 'Gipuzkoa', '687431908', 'agarciautiguregui@hoteltxelupo.com');
+
+COMMIT;
+
+
+-- -----------------------------------------------------
+-- Data for table `IFP_SHOP`.`TIPO_PAGOS`
+-- -----------------------------------------------------
+START TRANSACTION;
+USE `IFP_SHOP`;
+INSERT INTO `IFP_SHOP`.`TIPO_PAGOS` (`ID_PAGO`, `TIPO_PAGO`, `COMENTARIOS_PAGO`) VALUES (1, 'Banco', 'Transferencia Bancaria');
+INSERT INTO `IFP_SHOP`.`TIPO_PAGOS` (`ID_PAGO`, `TIPO_PAGO`, `COMENTARIOS_PAGO`) VALUES (2, 'Tarjeta bancaria', 'Targeta de crédito o debito');
+INSERT INTO `IFP_SHOP`.`TIPO_PAGOS` (`ID_PAGO`, `TIPO_PAGO`, `COMENTARIOS_PAGO`) VALUES (3, 'Paypal', 'Transferencia a través de Paypal');
+INSERT INTO `IFP_SHOP`.`TIPO_PAGOS` (`ID_PAGO`, `TIPO_PAGO`, `COMENTARIOS_PAGO`) VALUES (4, 'Excento de pago', 'No necesita cobro');
+
+COMMIT;
+
+
+-- -----------------------------------------------------
+-- Data for table `IFP_SHOP`.`TRANSPORTISTAS`
+-- -----------------------------------------------------
+START TRANSACTION;
+USE `IFP_SHOP`;
+INSERT INTO `IFP_SHOP`.`TRANSPORTISTAS` (`ID_TRANSPORTISTA`, `NOM_TRANSPORTISTA`, `TELF_TRANSPORTISTA`, `EMAIL_TRANSPORTISTA`) VALUES (1, 'UPS', '917456400', 'logistica@ups.es');
+INSERT INTO `IFP_SHOP`.`TRANSPORTISTAS` (`ID_TRANSPORTISTA`, `NOM_TRANSPORTISTA`, `TELF_TRANSPORTISTA`, `EMAIL_TRANSPORTISTA`) VALUES (2, 'DACHSER', '902312311', 'envios@dachser.es');
+INSERT INTO `IFP_SHOP`.`TRANSPORTISTAS` (`ID_TRANSPORTISTA`, `NOM_TRANSPORTISTA`, `TELF_TRANSPORTISTA`, `EMAIL_TRANSPORTISTA`) VALUES (3, 'CORREOS', '902197197', 'clientes@correoexpress.com');
+
+COMMIT;
+
+
+-- -----------------------------------------------------
+-- Data for table `IFP_SHOP`.`PEDIDOS`
+-- -----------------------------------------------------
+/*
+START TRANSACTION;
+USE `IFP_SHOP`;
+INSERT INTO `IFP_SHOP`.`PEDIDOS` (`ID_PEDIDO`, `NUM_PEDIDO`, `FECHA_PEDIDO`, `FECHA_ENVIO`, `ESTADO_PEDIDO`, `ID_CLIENTE`, `ID_PAGO`, `ID_TRANSPORTISTA`) VALUES (1, '2023-A0001', '2023-04-01', '2023-04-03', 'Entregado', 1, 1, NULL);
+INSERT INTO `IFP_SHOP`.`PEDIDOS` (`ID_PEDIDO`, `NUM_PEDIDO`, `FECHA_PEDIDO`, `FECHA_ENVIO`, `ESTADO_PEDIDO`, `ID_CLIENTE`, `ID_PAGO`, `ID_TRANSPORTISTA`) VALUES (2, '2023-A0002', '2023-05-07', '2023-05-08', 'Validado', 1, 1, 1);
+INSERT INTO `IFP_SHOP`.`PEDIDOS` (`ID_PEDIDO`, `NUM_PEDIDO`, `FECHA_PEDIDO`, `FECHA_ENVIO`, `ESTADO_PEDIDO`, `ID_CLIENTE`, `ID_PAGO`, `ID_TRANSPORTISTA`) VALUES (3, '2023-A0003', '2023-05-07', '2023-05-09', 'Pagado', 3, 2, 2);
+INSERT INTO `IFP_SHOP`.`PEDIDOS` (`ID_PEDIDO`, `NUM_PEDIDO`, `FECHA_PEDIDO`, `FECHA_ENVIO`, `ESTADO_PEDIDO`, `ID_CLIENTE`, `ID_PAGO`, `ID_TRANSPORTISTA`) VALUES (4, '2023-A0004', '2023-06-21', '2023-06-29', 'Pendiente Pago', 4, 2, NULL);
+
+COMMIT;
+*/
+
+CALL PR_CARGA_PEDIDOS(100);
+
+
+-- -----------------------------------------------------
+-- Data for table `IFP_SHOP`.`DETALLES_PEDIDO`
+-- -----------------------------------------------------
+/*
+START TRANSACTION;
+USE `IFP_SHOP`;
+INSERT INTO `IFP_SHOP`.`DETALLES_PEDIDO` (`ID_DETALLE_PRODUCTO`, `ID_PEDIDO`, `ID_PRODUCTO`, `CANTIDAD_PRODUCTO`, `PRECIO_UNITARIO`, `PRECIO_TOTAL_PRODUCTO`, `DESCUENTO`, `IMPORTE_TOTAL_PRODUCTO`) VALUES (1, 1, 2, 2, NULL, NULL, NULL, NULL);
+INSERT INTO `IFP_SHOP`.`DETALLES_PEDIDO` (`ID_DETALLE_PRODUCTO`, `ID_PEDIDO`, `ID_PRODUCTO`, `CANTIDAD_PRODUCTO`, `PRECIO_UNITARIO`, `PRECIO_TOTAL_PRODUCTO`, `DESCUENTO`, `IMPORTE_TOTAL_PRODUCTO`) VALUES (2, 1, 3, 10, NULL, NULL, NULL, NULL);
+INSERT INTO `IFP_SHOP`.`DETALLES_PEDIDO` (`ID_DETALLE_PRODUCTO`, `ID_PEDIDO`, `ID_PRODUCTO`, `CANTIDAD_PRODUCTO`, `PRECIO_UNITARIO`, `PRECIO_TOTAL_PRODUCTO`, `DESCUENTO`, `IMPORTE_TOTAL_PRODUCTO`) VALUES (3, 1, 1, 3, NULL, NULL, NULL, NULL);
+INSERT INTO `IFP_SHOP`.`DETALLES_PEDIDO` (`ID_DETALLE_PRODUCTO`, `ID_PEDIDO`, `ID_PRODUCTO`, `CANTIDAD_PRODUCTO`, `PRECIO_UNITARIO`, `PRECIO_TOTAL_PRODUCTO`, `DESCUENTO`, `IMPORTE_TOTAL_PRODUCTO`) VALUES (4, 1, 7, 1, NULL, NULL, NULL, NULL);
+INSERT INTO `IFP_SHOP`.`DETALLES_PEDIDO` (`ID_DETALLE_PRODUCTO`, `ID_PEDIDO`, `ID_PRODUCTO`, `CANTIDAD_PRODUCTO`, `PRECIO_UNITARIO`, `PRECIO_TOTAL_PRODUCTO`, `DESCUENTO`, `IMPORTE_TOTAL_PRODUCTO`) VALUES (5, 1, 8, 2, NULL, NULL, NULL, NULL);
+
+COMMIT;
+*/
+
+CALL PR_CARGA_DETALLES_PEDIDO(10,1);
+
+
+-- -----------------------------------------------------
+-- Data for table `IFP_SHOP`.`PROVEEDORES`
+-- -----------------------------------------------------
+START TRANSACTION;
+USE `IFP_SHOP`;
+INSERT INTO `IFP_SHOP`.`PROVEEDORES` (`ID_PROVEEDOR`, `NOM_PROVEEDOR`, `PAIS`, `EMAIL_PROVEEDOR`) VALUES (1, 'Distribuciones Alimentacion', 'España', 'ventas_dalimentacion@dalimentacion.es');
+INSERT INTO `IFP_SHOP`.`PROVEEDORES` (`ID_PROVEEDOR`, `NOM_PROVEEDOR`, `PAIS`, `EMAIL_PROVEEDOR`) VALUES (2, 'Paper and tools', 'Inglaterra', 'salesdeliveri_ptools@ptools.uk');
+INSERT INTO `IFP_SHOP`.`PROVEEDORES` (`ID_PROVEEDOR`, `NOM_PROVEEDOR`, `PAIS`, `EMAIL_PROVEEDOR`) VALUES (3, 'Optimus', 'España', 'clientes_optims@optimus.es');
+
+COMMIT;
+
+
+-- -----------------------------------------------------
+-- Data for table `IFP_SHOP`.`PROVEEDORES_PRODUCTOS`
+-- -----------------------------------------------------
+START TRANSACTION;
+USE `IFP_SHOP`;
+INSERT INTO `IFP_SHOP`.`PROVEEDORES_PRODUCTOS` (`ID_PROVEEDOR_PRODUCTO`, `ID_PROVEEDOR`, `ID_PRODUCTO`) VALUES (1, 1, 1);
+INSERT INTO `IFP_SHOP`.`PROVEEDORES_PRODUCTOS` (`ID_PROVEEDOR_PRODUCTO`, `ID_PROVEEDOR`, `ID_PRODUCTO`) VALUES (2, 2, 2);
+INSERT INTO `IFP_SHOP`.`PROVEEDORES_PRODUCTOS` (`ID_PROVEEDOR_PRODUCTO`, `ID_PROVEEDOR`, `ID_PRODUCTO`) VALUES (3, 2, 3);
+INSERT INTO `IFP_SHOP`.`PROVEEDORES_PRODUCTOS` (`ID_PROVEEDOR_PRODUCTO`, `ID_PROVEEDOR`, `ID_PRODUCTO`) VALUES (4, 2, 4);
+INSERT INTO `IFP_SHOP`.`PROVEEDORES_PRODUCTOS` (`ID_PROVEEDOR_PRODUCTO`, `ID_PROVEEDOR`, `ID_PRODUCTO`) VALUES (5, 3, 5);
+INSERT INTO `IFP_SHOP`.`PROVEEDORES_PRODUCTOS` (`ID_PROVEEDOR_PRODUCTO`, `ID_PROVEEDOR`, `ID_PRODUCTO`) VALUES (6, 3, 6);
+
+COMMIT;
