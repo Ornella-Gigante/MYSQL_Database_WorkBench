@@ -1,6 +1,6 @@
-# 📚 BBDD_Practice: My First Steps with SQL
+# 📚 MYSQL_Database_WorkBench: My First Steps with SQL
 
-Welcome to **BBDD_Practice**! This repository contains a small project I created during my time at the institute, which I'm excited to share as it was one of my initial forays into the world of SQL. Here's what you need to know:
+This repository contains a small project I created during my time at the institute, which I'm excited to share as it was one of my initial forays into the world of SQL. Here's what you need to know:
 
 ## 🚀 Project Overview
 
@@ -58,9 +58,8 @@ This project is open-sourced under the [MIT License](LICENSE). You are free to u
 
 ## 🌐 Connect
 
-- [GitHub](https://github.com/Ornella-Gigante)
+
 - [LinkedIn](https://www.linkedin.com/in/ornella-gigante/)
 
-Let's explore the world of SQL together with **BBDD_Practice**! 🎉
 
 ![SQL Icon](https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Sql_data_base_with_logo.png/1200px-Sql_data_base_with_logo.png)
